@@ -1,0 +1,83 @@
+PATH
+  remote: ..
+  specs:
+    akin (0.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  remote: https://rails-assets.org/
+  specs:
+    awesome_print (1.7.0)
+    coderay (1.1.1)
+    concurrent-ruby (1.0.2)
+    daemons (1.2.3)
+    diff-lcs (1.2.5)
+    eventmachine (1.2.0.1)
+    hike (1.2.3)
+    method_source (0.8.2)
+    opal (0.10.1)
+      hike (~> 1.2)
+      sourcemap (~> 0.1.0)
+      sprockets (~> 3.1)
+      tilt (>= 1.4)
+    opal-rspec (0.6.0.beta1)
+      opal (>= 0.10.0, < 0.11)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    rack (2.0.1)
+    rack-unreloader (1.5.0)
+    rails-assets-jquery (3.1.0)
+    rails-assets-todomvc-app-css (2.0.6)
+    rails-assets-todomvc-common (1.0.2)
+    roda (2.16.0)
+      rack
+    rspec (3.5.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+    rspec-core (3.5.2)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-mocks (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
+    sass (3.4.22)
+    slop (3.6.0)
+    sourcemap (0.1.1)
+    sprockets (3.7.0)
+      concurrent-ruby (~> 1.0)
+      rack (> 1, < 3)
+    thin (1.7.0)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0, >= 1.0.4)
+      rack (>= 1, < 3)
+    tilt (2.0.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  akin!
+  awesome_print (= 1.7.0)
+  opal (= 0.10.1)
+  opal-rspec (= 0.6.0.beta1)
+  pry (= 0.10.4)
+  rack-unreloader (= 1.5.0)
+  rails-assets-jquery (= 3.1.0)!
+  rails-assets-todomvc-app-css (= 2.0.6)!
+  rails-assets-todomvc-common (= 1.0.2)!
+  roda (= 2.16.0)
+  rspec (= 3.5.0)
+  sass (= 3.4.22)
+  thin (= 1.7.0)
+
+RUBY VERSION
+   ruby 2.3.1p112
+
+BUNDLED WITH
+   1.12.5

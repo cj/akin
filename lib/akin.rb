@@ -1,13 +1,20 @@
 # frozen-string-literal: true
 
+require "akin/opal" if RUBY_ENGINE == 'opal'
 require "akin/version"
+require "akin/cache"
+require "akin/core"
+require "akin/plugins"
 
 module Akin
-  # Error class raised by Akin
-  class AkinError < StandardError; end
+  include Core
 
-  autoload :Core,    'akin/core'
-  autoload :Plugins, 'akin/plugins'
-  autoload :Cache,   'akin/cache'
-  autoload :Opal,    'akin/opal'
+  # Error class raised by Akin
+  class Error < StandardError; end
+
+  def self.opts
+    @opts ||= Cache.new
+  end
+
+  extend Core::ClassMethods
 end

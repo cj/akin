@@ -13,6 +13,7 @@ module Akin
       unless plugin = h[name]
         begin
           require "akin/plugins/#{name}"
+          plugin = h[name]
         rescue
           raise Error, "Plugin #{name} did not register itself correctly in Akin::Plugins" unless plugin = h[name]
         end
