@@ -1,6 +1,5 @@
 require 'roda'
 require 'akin'
-require 'akin/opal'
 
 # assets
 require 'sass'

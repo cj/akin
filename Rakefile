@@ -1,7 +1,7 @@
 require "bundler/gem_tasks"
-require 'akin/opal'
 require "rspec/core/rake_task"
 require 'opal/rspec/rake_task'
+require 'akin/opal'
 
 RSpec::Core::RakeTask.new('rspec:ruby') do |task|
   task.pattern = 'spec/**/*_spec.rb'
