@@ -12,7 +12,7 @@ module Akin
 
       unless plugin = h[name]
         begin
-          require "akin/plugins/#{name}"
+          require "akin/plugins/#{name}" unless RUBY_ENGINE == 'opal'
           plugin = h[name]
         rescue
           raise Error, "Plugin #{name} did not register itself correctly in Akin::Plugins" unless plugin = h[name]

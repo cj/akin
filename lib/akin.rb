@@ -15,6 +15,4 @@ module Akin
   def self.opts
     @opts ||= Cache.new
   end
-
-  extend Core::ClassMethods
 end
