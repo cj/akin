@@ -6,7 +6,9 @@ gem 'roda', '2.16.0'
 gem 'rack-unreloader', '1.5.0'
 gem 'thin', '1.7.0'
 gem 'opal', '0.10.1'
+gem 'opal-jquery', '0.4.2'
 gem 'akin', path: '..'
+gem 'nokogiri', '1.6.8'
 gem 'sass', '3.4.22'
 
 group :test, :development do

@@ -9,6 +9,8 @@ require "akin/plugins"
 module Akin
   include Core
 
+  autoload :Opal, 'akin/opal'
+
   # Error class raised by Akin
   class Error < StandardError; end
 

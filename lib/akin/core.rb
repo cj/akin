@@ -14,6 +14,10 @@ module Akin
         plugin.configure(self, *args, &block) if plugin.respond_to?(:configure)
         nil
       end
+
+      def plugins(*plugins)
+        plugins.each { |p| plugin p }
+      end
     end
   end
 end

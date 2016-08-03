@@ -1,9 +1,7 @@
 require 'spec_helper'
 
 unless RUBY_ENGINE == 'opal'
-  require 'akin/plugins/sprockets'
-
-  describe Akin::Plugins::Sprockets do
+  describe 'Akin::Plugins::Sprockets' do
     before { Akin.plugin :sprockets }
 
     it "#sprockets_prefix" do
