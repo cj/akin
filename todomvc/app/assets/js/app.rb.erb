@@ -1,2 +1,4 @@
 require 'jquery'
 require 'akin'
+
+<%= Akin.client_files.map { |file_path| "require '#{file_path}'" }.join(';')  %>

@@ -1,5 +1,9 @@
 module Akin
   module Plugins
+    extend self
+
+    attr_reader :plugins
+
     # Stores registered plugins
     @plugins = Cache.new
 
@@ -7,7 +11,7 @@ module Akin
     # require it and return it.  This raises a LoadError if such a
     # plugin doesn't exist, or a Error if it exists but it does
     # not register itself correctly.
-    def self.load_plugin(name)
+    def load_plugin(name)
       h = @plugins
 
       unless plugin = h[name]
@@ -19,15 +23,16 @@ module Akin
         end
       end
 
-      plugin
+      plugin[:mod]
     end
 
     # Register the given plugin with , so that it can be loaded using #plugin
     # with a symbol.  Should be used by plugin files. Example:
     #
     #   ::Plugins.register_plugin(:plugin_name, PluginModule)
-    def self.register(name, mod)
-      @plugins[name] = mod
+    def register(name, mod)
+      file_path = RUBY_ENGINE == 'opal' ? '' : caller[0][/[^:]*/].sub(DIR_PATH, '').sub(Dir.pwd, '')[1..-1]
+      @plugins[name] = { mod: mod, file_path: file_path }
     end
   end
 end

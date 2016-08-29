@@ -11,6 +11,8 @@ module Akin
 
   autoload :Opal, 'akin/opal'
 
+  DIR_PATH = File.expand_path('..', __FILE__)
+
   # Error class raised by Akin
   class Error < StandardError; end
 
